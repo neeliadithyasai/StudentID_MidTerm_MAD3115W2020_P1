@@ -85,7 +85,13 @@
                             <outlet property="delegate" destination="2XA-24-UYv" id="uvr-Y1-cNm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="uwA-ye-XbK"/>
+                    <navigationItem key="navigationItem" id="uwA-ye-XbK">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="hW1-yB-xQZ">
+                            <connections>
+                                <segue destination="Xvf-lu-jb2" kind="show" id="08r-iW-8NJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zmh-ZC-Vr3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -108,6 +114,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cnH-6h-mgh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="292.75362318840581" y="-83.035714285714278"/>
+        </scene>
+        <!--Add New Customer View Controller-->
+        <scene sceneID="DKx-D9-b4g">
+            <objects>
+                <viewController id="Xvf-lu-jb2" customClass="AddNewCustomerViewController" customModule="StudentID_MidTerm_MAD3115W2020_P1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a9K-Yk-7D7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="oKW-Cq-7Js"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Iec-Jv-oZF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="88E-aK-rlZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2994" y="-83"/>
         </scene>
     </scenes>
 </document>

@@ -13,6 +13,7 @@
 		7A97C2FB2411BC2700079AA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A97C2FA2411BC2700079AA3 /* Assets.xcassets */; };
 		7A97C2FE2411BC2700079AA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A97C2FC2411BC2700079AA3 /* LaunchScreen.storyboard */; };
 		7A97C32E24121D8100079AA3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A97C32D24121D8100079AA3 /* LoginViewController.swift */; };
+		7A97C3302412228900079AA3 /* AddNewCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A97C32F2412228900079AA3 /* AddNewCustomerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7A97C2FD2411BC2700079AA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A97C2FF2411BC2700079AA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A97C32D24121D8100079AA3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7A97C32F2412228900079AA3 /* AddNewCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCustomerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				7A97C2FC2411BC2700079AA3 /* LaunchScreen.storyboard */,
 				7A97C2FF2411BC2700079AA3 /* Info.plist */,
 				7A97C32D24121D8100079AA3 /* LoginViewController.swift */,
+				7A97C32F2412228900079AA3 /* AddNewCustomerViewController.swift */,
 			);
 			path = StudentID_MidTerm_MAD3115W2020_P1;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A97C32E24121D8100079AA3 /* LoginViewController.swift in Sources */,
+				7A97C3302412228900079AA3 /* AddNewCustomerViewController.swift in Sources */,
 				7A97C2F22411BC2400079AA3 /* AppDelegate.swift in Sources */,
 				7A97C2F42411BC2400079AA3 /* SceneDelegate.swift in Sources */,
 			);
