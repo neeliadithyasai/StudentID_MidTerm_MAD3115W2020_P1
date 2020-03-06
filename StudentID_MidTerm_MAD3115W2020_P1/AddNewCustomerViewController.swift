@@ -10,8 +10,11 @@ import UIKit
 
 class AddNewCustomerViewController: UIViewController {
 
+//    lazy var countries: [Country] = []
+     
     override func viewDidLoad() {
-        super.viewDidLoad()
+      super.viewDidLoad()
+//      countries = Datastorage.getInstance().getallcountries()
 
         // Do any additional setup after loading the view.
     }
