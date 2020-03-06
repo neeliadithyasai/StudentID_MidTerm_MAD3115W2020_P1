@@ -7,3 +7,11 @@
 //
 
 import Foundation
+extension Date {
+    
+    func formatDate(date : Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE, dd MMMM, yyyy"
+        return dateFormatter.string(from: date)
+    }
+}
