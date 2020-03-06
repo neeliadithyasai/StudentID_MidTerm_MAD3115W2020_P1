@@ -51,6 +51,12 @@
                         <viewLayoutGuide key="safeArea" id="evo-gL-1hg"/>
                     </view>
                     <navigationItem key="navigationItem" id="ZNo-iy-2X1"/>
+                    <connections>
+                        <outlet property="btnLogin" destination="ZfA-TX-eVr" id="gh1-wa-YQf"/>
+                        <outlet property="switchRememberme" destination="z8T-46-pgo" id="wjw-LL-QqQ"/>
+                        <outlet property="txtPassword" destination="sJk-xE-Rbu" id="WMn-KV-766"/>
+                        <outlet property="txtUsername" destination="j83-k0-5k2" id="SfT-e6-S6z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LJN-vu-8gx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
