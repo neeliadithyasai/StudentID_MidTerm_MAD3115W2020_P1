@@ -16,12 +16,23 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var switchRememberme: UISwitch!
     
-    @IBOutlet weak var btnLogin: UIButton!
-    
-    override func viewDidLoad() {
+
+      override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    
+  
+    @IBAction func btnLogin(_ sender: Any) {
+        
+        if txtUsername.text == txtPassword.text
+        {
+             //performSegue(withIdentifier: "segue1", sender: self)
+        } else
+        {
+        }
     }
     
 
