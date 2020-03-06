@@ -9,11 +9,66 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+//    
+    let email = "admin"
+    let password = "admin123"
 
-    override func viewDidLoad() {
+    
+    @IBOutlet weak var txtLogin: UITextField!
+    
+    @IBOutlet weak var txtPassword: UITextField!
+    
+    
+    @IBOutlet weak var btnRememberme: UISwitch!
+    
+    @IBOutlet weak var btnLogin: UIBarButtonItem!
+    
+    
+    @IBOutlet weak var trial: UIButton!
+    
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let ud = UserDefaults.standard
+        let em = ud.string(forKey: "email")
+        let pass = ud.string(forKey: "password")
+
+        if let email = em {
+            txtLogin.text = "\(email)"
+        }
+
+        if let password = pass {
+            txtPassword.text = "\(password)"
+        }
+      
     }
+    
+    @IBAction func btnLogin(_ sender: UIBarButtonItem)
+    {
+        
+        
+        
+//                if txtLogin.text == email && txtPassword.text == password{
+//                    if btnRememberme.isOn == true {
+//                        UserDefaults.standard.set(txtLogin.text!, forKey: "email")
+//                        UserDefaults.standard.set(txtPassword.text!, forKey: "password")
+//                    }
+//                    performSegue(withIdentifier: "segue", sender: self)
+//                }
+//                else{
+//                    let alertController = UIAlertController(title: "ERROR", message:
+//                        "Access Denied", preferredStyle: .alert)
+//                    alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+//        
+//                    self.present(alertController, animated: true, completion: nil)
+//            }
+    }
+   
+    
+    
 
 
 }
