@@ -86,7 +86,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="uwA-ye-XbK">
-                        <barButtonItem key="rightBarButtonItem" title="Add New Customer" id="hW1-yB-xQZ"/>
+                        <barButtonItem key="rightBarButtonItem" title="Add New Customer" id="hW1-yB-xQZ">
+                            <connections>
+                                <segue destination="Xvf-lu-jb2" kind="show" id="KLg-Nb-WAe"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zmh-ZC-Vr3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

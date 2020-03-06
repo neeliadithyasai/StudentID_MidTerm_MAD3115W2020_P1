@@ -16,6 +16,9 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var switchRememberme: UISwitch!
     
+    let email = "admin"
+    let password = "admin123"
+    
 
       override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,18 +30,33 @@ class LoginViewController: UIViewController {
   
     @IBAction func btnLogin(_ sender: Any) {
         
-        if txtUsername.text == txtPassword.text
-        {
-             //performSegue(withIdentifier: "segue1", sender: self)
-        } else
-        {
+        if txtUsername.text == email && txtPassword.text == password {
+       
+                }
+         else{
             
-            let alertController = UIAlertController(title: "Password Incorrect", message: "Please re-type password", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                        
-            alertController.addAction(defaultAction)
-            self.present(alertController, animated: true, completion: nil)
-        }
+           let alertController = UIAlertController(title: "Username or Password Incorrect", message: "Please check Username or password", preferredStyle: .alert)
+                  let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                              
+                  alertController.addAction(defaultAction)
+                  self.present(alertController, animated: true, completion: nil)
+           
+               }
+                    
+              }
+        
+//        if txtUsername.text == txtPassword.text
+//        {
+//             //performSegue(withIdentifier: "segue1", sender: self)
+//        } else
+//        {
+//
+//            let alertController = UIAlertController(title: "Password Incorrect", message: "Please re-type password", preferredStyle: .alert)
+//            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+//
+//            alertController.addAction(defaultAction)
+//            self.present(alertController, animated: true, completion: nil)
+//        }
     }
     
 
@@ -52,4 +70,4 @@ class LoginViewController: UIViewController {
     }
     */
 
-}
+
