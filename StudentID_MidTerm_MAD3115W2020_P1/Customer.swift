@@ -26,15 +26,15 @@ class Customer: IDisplay {
     lazy var totalBill: Double = calculatedBill()
     
 
-    init(customerId:String, firstName: String, lastName: String, email: String)throws {
+    init(customerId:String, firstName: String, lastName: String, email: String){
         self.customerId = customerId
         self.firstName = firstName
         self.lastName = lastName
         
-        guard email.isValidEmail else {
-            throw validEmail.invalidEmail(Problem: "\(email)")
-        }
-    
+//        guard email.isValidEmail else {
+//            validEmail.invalidEmail(Problem: "\(email)")
+//        }
+//    
         self.email = email
     }
     func calculatedBill() -> Double{

@@ -38,7 +38,7 @@ extension CustomerViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customerCell")
         let customer = customerNames[indexPath.row]
-        cell?.textLabel?.text = customer.fullName
+        cell?.textLabel?.text = customer.firstName
         
         return cell!
         
