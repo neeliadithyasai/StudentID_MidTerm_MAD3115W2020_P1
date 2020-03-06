@@ -11,6 +11,7 @@
 		7A010B61241289780096C6F1 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A010B60241289780096C6F1 /* Customer.swift */; };
 		7A010B63241289F70096C6F1 /* IDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A010B62241289F70096C6F1 /* IDisplay.swift */; };
 		7A010B6524128B050096C6F1 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A010B6424128B050096C6F1 /* Bill.swift */; };
+		7A010B6724128BC40096C6F1 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A010B6624128BC40096C6F1 /* DateExtension.swift */; };
 		7A97C2F22411BC2400079AA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A97C2F12411BC2400079AA3 /* AppDelegate.swift */; };
 		7A97C2F42411BC2400079AA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A97C2F32411BC2400079AA3 /* SceneDelegate.swift */; };
 		7A97C2F92411BC2400079AA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A97C2F72411BC2400079AA3 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		7A010B60241289780096C6F1 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		7A010B62241289F70096C6F1 /* IDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDisplay.swift; sourceTree = "<group>"; };
 		7A010B6424128B050096C6F1 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
+		7A010B6624128BC40096C6F1 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		7A97C2EE2411BC2400079AA3 /* StudentID_MidTerm_MAD3115W2020_P1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentID_MidTerm_MAD3115W2020_P1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A97C2F12411BC2400079AA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A97C2F32411BC2400079AA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				7A010B60241289780096C6F1 /* Customer.swift */,
 				7A010B62241289F70096C6F1 /* IDisplay.swift */,
 				7A010B6424128B050096C6F1 /* Bill.swift */,
+				7A010B6624128BC40096C6F1 /* DateExtension.swift */,
 			);
 			path = StudentID_MidTerm_MAD3115W2020_P1;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 				7A010B5F241270DA0096C6F1 /* CustomerTableViewController.swift in Sources */,
 				7A97C32E24121D8100079AA3 /* LoginViewController.swift in Sources */,
 				7A97C3302412228900079AA3 /* AddNewCustomerViewController.swift in Sources */,
+				7A010B6724128BC40096C6F1 /* DateExtension.swift in Sources */,
 				7A010B63241289F70096C6F1 /* IDisplay.swift in Sources */,
 				7A010B61241289780096C6F1 /* Customer.swift in Sources */,
 				7A97C2F22411BC2400079AA3 /* AppDelegate.swift in Sources */,
