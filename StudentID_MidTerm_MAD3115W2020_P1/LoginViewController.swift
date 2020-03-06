@@ -32,6 +32,12 @@ class LoginViewController: UIViewController {
              //performSegue(withIdentifier: "segue1", sender: self)
         } else
         {
+            
+            let alertController = UIAlertController(title: "Password Incorrect", message: "Please re-type password", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                        
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
         }
     }
     
