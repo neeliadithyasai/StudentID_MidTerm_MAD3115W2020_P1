@@ -11,9 +11,11 @@ import UIKit
 class CustomerTableViewController: UIViewController{
 
  
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+        lazy var customers: [Customer] = []
+         
+        override func viewDidLoad() {
+          super.viewDidLoad()
+          customers = Datastorage.getInstance().getallcountries()
        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -66,7 +68,7 @@ class CustomerTableViewController: UIViewController{
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 
