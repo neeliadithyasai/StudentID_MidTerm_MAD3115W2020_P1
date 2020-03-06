@@ -12,10 +12,10 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var txtUsername: UITextField!
     
-    @IBOutlet weak var txtPassword: UITextField!
-    
     @IBOutlet weak var switchRememberme: UISwitch!
-    
+    @IBOutlet weak var txtPassword: UITextField!
+
+    var myUserDefault: UserDefaults!
     let email = "admin"
     let password = "admin123"
     
@@ -23,14 +23,38 @@ class LoginViewController: UIViewController {
       override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+      
     }
     
+
+
+       override func didReceiveMemoryWarning() {
+           super.didReceiveMemoryWarning()
+           // Dispose of any resources that can be recreated.
+       }
     
   
     @IBAction func btnLogin(_ sender: Any) {
         
-        if txtUsername.text == email && txtPassword.text == password {
+        if txtUsername.text == email && txtPassword.text == password
+        {
+
+            if switchRememberme.isOn{
+                 UserDefaults.standard.set(txtUsername.text, forKey: "email")
+                 UserDefaults.standard.set(txtPassword.text, forKey: "password")
+                 
+                 let ud = UserDefaults.standard
+                 let email = ud.string(forKey: "email")
+                 txtUsername.text = email
+                 let password = ud.string(forKey: "password")
+                 txtPassword.text = password
+                 
+             }else{
+                 UserDefaults.standard.removeObject(forKey: "email")
+                 UserDefaults.standard.removeObject(forKey: "password")
+                 txtUsername.text = ""
+                 txtPassword.text = ""
+             }
        
                 }
          else{
@@ -44,20 +68,19 @@ class LoginViewController: UIViewController {
                }
                     
               }
+    
+    
+    
+    @IBAction func switchRememberMe(_ sender: UISwitch)
+    {
+
         
-//        if txtUsername.text == txtPassword.text
-//        {
-//             //performSegue(withIdentifier: "segue1", sender: self)
-//        } else
-//        {
-//
-//            let alertController = UIAlertController(title: "Password Incorrect", message: "Please re-type password", preferredStyle: .alert)
-//            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-//
-//            alertController.addAction(defaultAction)
-//            self.present(alertController, animated: true, completion: nil)
-//        }
     }
+   @IBAction func unwindToMenu(segue: UIStoryboardSegue) {}
+    
+}
+ 
+   
     
 
     /*
