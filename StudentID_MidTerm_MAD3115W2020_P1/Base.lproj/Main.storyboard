@@ -116,6 +116,11 @@
                         <viewLayoutGuide key="safeArea" id="Ier-LA-hh9"/>
                     </view>
                     <navigationItem key="navigationItem" id="SWQ-hT-tfd">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="Vr7-f1-4Gd">
+                            <connections>
+                                <action selector="btnLogout:" destination="rPn-wl-2B0" id="DqL-yV-BsN"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add New Customer" id="7eL-as-xwj">
                             <connections>
                                 <segue destination="Xvf-lu-jb2" kind="show" id="ilo-Nb-zGk"/>
@@ -124,9 +129,11 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tblCustomers" destination="o8k-MJ-XVJ" id="Yal-mR-5uJ"/>
+                        <segue destination="Mqy-ki-orM" kind="unwind" identifier="unwindToMenu" unwindAction="unwindToMenuWithSegue:" id="zHw-72-irL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SaH-nX-TnR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Mqy-ki-orM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2075.36231884058" y="-83.035714285714278"/>
         </scene>

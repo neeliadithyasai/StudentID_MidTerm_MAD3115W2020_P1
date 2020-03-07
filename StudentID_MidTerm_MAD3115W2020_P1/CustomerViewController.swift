@@ -12,6 +12,18 @@ class CustomerViewController: UIViewController {
 
     @IBOutlet weak var tblCustomers: UITableView!
     
+    @IBAction func btnLogout(_ sender: Any) {
+        let alert = UIAlertController(title: "Logged Out!", message: "you are logged out of current session", preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {
+               (_)in
+               self.performSegue(withIdentifier: "unwindToMenu", sender: self)
+           })
+        
+            alert.addAction(OKAction)
+           self.present(alert, animated: true, completion: nil)
+    
+        
+    }
     
   
     lazy var customerNames : [Customer] = []
@@ -51,6 +63,8 @@ extension CustomerViewController: UITableViewDelegate,UITableViewDataSource{
             navigationController?.pushViewController(viewController, animated: true)
         }
                  
+        
+        
         
     }
             
