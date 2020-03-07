@@ -96,6 +96,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="bb2-2O-0uJ" kind="show" id="YAg-fh-kCI"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -126,6 +129,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SaH-nX-TnR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2075.36231884058" y="-83.035714285714278"/>
+        </scene>
+        <!--Bill Details View Controller-->
+        <scene sceneID="eD4-HJ-mRH">
+            <objects>
+                <viewController storyboardIdentifier="billDetails" id="bb2-2O-0uJ" customClass="billDetailsViewController" customModule="StudentID_MidTerm_MAD3115W2020_P1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mEv-ii-SiF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="RJi-KY-Hot"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="j0A-oc-FqZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lkm-wO-WWP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3036" y="640"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WCY-Eg-YC9">

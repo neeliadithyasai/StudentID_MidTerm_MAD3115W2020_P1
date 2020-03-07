@@ -43,6 +43,16 @@ extension CustomerViewController: UITableViewDelegate,UITableViewDataSource{
         return cell!
         
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedTrail = customerNames[indexPath.row]
+        
+        if let viewController = storyboard?.instantiateViewController(identifier: "billDetails") as? CustomerViewController {
+            viewController.customerNames = [selectedTrail]
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+                 
+        
+    }
             
     }
     
