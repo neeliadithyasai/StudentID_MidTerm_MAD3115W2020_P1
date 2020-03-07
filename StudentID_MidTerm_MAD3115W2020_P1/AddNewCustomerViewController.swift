@@ -22,7 +22,29 @@ class AddNewCustomerViewController: UIViewController {
 
     }
     
+    @IBAction func btnAddCustomer(_ sender: UIButton)
+    {
+        
+            if let id = txtCustomerId.text, let fn = txtFirstname.text , let ln = txtLastName.text, let em = txtEmailId.text
+                 {
+                    if txtCustomerId.text == "" || txtFirstname.text == "" || txtLastName.text == ""
+                    {
+                        let alertController = UIAlertController(title: "Incomplete data", message: "Please check all fields ", preferredStyle: .alert)
+                                         let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                                                     
+                                         alertController.addAction(defaultAction)
+                                         self.present(alertController, animated: true, completion: nil)
+                        }else{
+                        DataStorage.getInstance().addCustomer(customer: Customer(customerId: "\(id)", firstName: "\(fn)", lastName: "\(ln)", email: "\(em)"))
+                    }
+        
+               // performSegue(withIdentifier: "segueSave", sender: self)
+        
+            }
+    }
     
+    
+
     
     
     

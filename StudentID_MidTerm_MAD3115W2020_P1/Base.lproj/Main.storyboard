@@ -70,11 +70,11 @@
             <objects>
                 <viewController storyboardIdentifier="cst1" id="rPn-wl-2B0" customClass="CustomerViewController" customModule="StudentID_MidTerm_MAD3115W2020_P1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dcq-KJ-B8D">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o8k-MJ-XVJ">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="RSj-ZW-sYH"/>
@@ -142,7 +142,7 @@
             <objects>
                 <viewController storyboardIdentifier="billDetails" id="bb2-2O-0uJ" customClass="billDetailsViewController" customModule="StudentID_MidTerm_MAD3115W2020_P1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mEv-ii-SiF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="RJi-KY-Hot"/>
@@ -151,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lkm-wO-WWP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3036" y="640"/>
+            <point key="canvasLocation" x="2075" y="779"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WCY-Eg-YC9">
@@ -176,7 +176,7 @@
             <objects>
                 <viewController id="Xvf-lu-jb2" customClass="AddNewCustomerViewController" customModule="StudentID_MidTerm_MAD3115W2020_P1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a9K-Yk-7D7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Customer Id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k08-Qp-a6m">
@@ -204,9 +204,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbj-Ko-shU">
-                                <rect key="frame" x="158" y="505" width="99" height="30"/>
+                                <rect key="frame" x="158" y="505" width="99" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Customer"/>
+                                <connections>
+                                    <action selector="btnAddCustomer:" destination="Xvf-lu-jb2" eventType="touchUpInside" id="dG8-h8-hfJ"/>
+                                    <segue destination="rPn-wl-2B0" kind="show" identifier="segueSave" id="LY3-dp-oWa"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -225,4 +229,7 @@
             <point key="canvasLocation" x="2992.753623188406" y="-83.035714285714278"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="LY3-dp-oWa"/>
+    </inferredMetricsTieBreakers>
 </document>
