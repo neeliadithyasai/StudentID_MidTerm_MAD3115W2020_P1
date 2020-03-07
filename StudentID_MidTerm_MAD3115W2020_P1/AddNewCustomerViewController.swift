@@ -10,14 +10,22 @@ import UIKit
 
 class AddNewCustomerViewController: UIViewController {
 
-//    lazy var countries: [Country] = []
-     
+    @IBOutlet weak var txtCustomerId: UITextField!
+    
+    @IBOutlet weak var txtFirstname: UITextField!
+    @IBOutlet weak var txtLastName: UITextField!
+    
+    @IBOutlet weak var txtEmailId: UITextField!
+    
     override func viewDidLoad() {
       super.viewDidLoad()
-//      countries = Datastorage.getInstance().getallcountries()
 
-        // Do any additional setup after loading the view.
     }
+    
+    
+    
+    
+    
     
 
     /*
