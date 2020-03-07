@@ -63,10 +63,7 @@ extension CustomerViewController: UITableViewDelegate,UITableViewDataSource{
             navigationController?.pushViewController(viewController, animated: true)
         }
                  
-        
-        
-        
-    }
+        }
             
     }
     

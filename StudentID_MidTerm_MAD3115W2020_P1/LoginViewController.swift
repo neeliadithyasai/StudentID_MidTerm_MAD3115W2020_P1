@@ -22,6 +22,18 @@ class LoginViewController: UIViewController {
 
       override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let ud = UserDefaults.standard
+               let e = ud.string(forKey: "email")
+               let p = ud.string(forKey: "password")
+            
+               if let em = e {
+                   txtUsername.text = "\(em)"
+               }
+               
+               if let pa = p {
+                   txtPassword.text = "\(pa)"
+               }
 
       
     }

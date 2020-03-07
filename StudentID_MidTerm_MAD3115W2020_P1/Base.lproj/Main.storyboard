@@ -68,7 +68,7 @@
         <!--Customer View Controller-->
         <scene sceneID="pAY-xK-Dgo">
             <objects>
-                <viewController storyboardIdentifier="cst1" id="rPn-wl-2B0" customClass="CustomerViewController" customModule="StudentID_MidTerm_MAD3115W2020_P1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="cst1" id="rPn-wl-2B0" customClass="CustomerViewController" customModule="StudentID_MidTerm_MAD3115W2020_P1" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dcq-KJ-B8D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,7 +97,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="bb2-2O-0uJ" kind="show" id="YAg-fh-kCI"/>
+                                            <segue destination="bb2-2O-0uJ" kind="show" id="vgC-Bd-daK"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -140,10 +140,19 @@
         <!--Bill Details View Controller-->
         <scene sceneID="eD4-HJ-mRH">
             <objects>
-                <viewController storyboardIdentifier="billDetails" id="bb2-2O-0uJ" customClass="billDetailsViewController" customModule="StudentID_MidTerm_MAD3115W2020_P1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="billDetails" id="bb2-2O-0uJ" customClass="billDetailsViewController" customModule="StudentID_MidTerm_MAD3115W2020_P1" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mEv-ii-SiF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFx-fP-s63">
+                                <rect key="frame" x="137" y="229" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="RJi-KY-Hot"/>
                     </view>
@@ -174,7 +183,7 @@
         <!--Add New Customer View Controller-->
         <scene sceneID="DKx-D9-b4g">
             <objects>
-                <viewController id="Xvf-lu-jb2" customClass="AddNewCustomerViewController" customModule="StudentID_MidTerm_MAD3115W2020_P1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Xvf-lu-jb2" customClass="AddNewCustomerViewController" customModule="StudentID_MidTerm_MAD3115W2020_P1" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a9K-Yk-7D7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
