@@ -34,13 +34,29 @@ class AddNewCustomerViewController: UIViewController {
                                                      
                                          alertController.addAction(defaultAction)
                                          self.present(alertController, animated: true, completion: nil)
-                        }else{
-                        DataStorage.getInstance().addCustomer(customer: Customer(customerId: "\(id)", firstName: "\(fn)", lastName: "\(ln)", email: "\(em)"))
-                    }
-        
-               // performSegue(withIdentifier: "segueSave", sender: self)
-        
+                        }
+                    else{
+                        do{
+                            DataStorage.getInstance().addCustomer(customer:try Customer(customerId: "\(id)", firstName: "\(fn)", lastName: "\(ln)", email: "\(em)"))
+                        }
+                        catch validEmail.invalidEmail(let Problem)
+                                  {
+                                       let alertController = UIAlertController(title: "Invalid email", message: "Please check emailId ", preferredStyle: .alert)
+                                                                              let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                                                                                          
+                                                                              alertController.addAction(defaultAction)
+                                                                              self.present(alertController, animated: true, completion: nil)
+                                      }
+                          catch {
+                                      print("Unrecognised Error")
+                                             }
+                                
             }
+        }
+      
+                    
+            }
+            
     }
     
     
@@ -60,4 +76,4 @@ class AddNewCustomerViewController: UIViewController {
     }
     */
 
-}
+

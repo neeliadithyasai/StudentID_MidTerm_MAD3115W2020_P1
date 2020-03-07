@@ -1,12 +1,3 @@
-//
-//  Customer.swift
-//  StudentID_MidTerm_MAD3115W2020_P1
-//
-//  Created by adithyasai neeli on 2020-03-06.
-//  Copyright © 2020 adithyasai neeli. All rights reserved.
-//
-
-
 
 import Foundation
 
@@ -25,16 +16,15 @@ class Customer: IDisplay {
     lazy var bills : [String:Bill]=[:]
     lazy var totalBill: Double = calculatedBill()
     
-
-    init(customerId:String, firstName: String, lastName: String, email: String){
+//https://docs.swift.org/swift-book/LanguageGuide/ErrorHandling.html
+    init(customerId:String, firstName: String, lastName: String, email: String)throws {
         self.customerId = customerId
         self.firstName = firstName
         self.lastName = lastName
         
-//        guard email.isValidEmail else {
-//            validEmail.invalidEmail(Problem: "\(email)")
-//        }
-//    
+        guard email.isValidEmail else{
+            throw validEmail.invalidEmail(Problem: "email")
+        }
         self.email = email
     }
     func calculatedBill() -> Double{

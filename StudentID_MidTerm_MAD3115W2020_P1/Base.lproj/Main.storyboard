@@ -102,7 +102,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="rPn-wl-2B0" id="A4z-8W-16e"/>
+                                    <outlet property="dataSource" destination="rPn-wl-2B0" id="Umh-dc-LCn"/>
                                     <outlet property="delegate" destination="rPn-wl-2B0" id="PJu-EG-O9Q"/>
                                 </connections>
                             </tableView>
@@ -230,6 +230,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="ilo-Nb-zGk"/>
         <segue reference="LY3-dp-oWa"/>
     </inferredMetricsTieBreakers>
 </document>

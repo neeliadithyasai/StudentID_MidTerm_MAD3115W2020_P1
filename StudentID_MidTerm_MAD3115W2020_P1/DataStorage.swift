@@ -24,11 +24,19 @@ class DataStorage {
         return self.customers
     }
     
-    func loadCustomers(){
-       
-            customers.append(Customer(customerId: "C001", firstName: "michael", lastName: "stuart", email: "stuartm@gmail.com"))
-            customers.append(Customer(customerId: "C001", firstName: "Robin", lastName: "Matthew", email: "robinm@yahoo.com"))
-        
-}
+   func loadCustomers(){
+        do{
+            customers.append(try Customer(customerId: "C301", firstName: "Steven", lastName: "Gerrard", email: "sgerrard@gmail.com"))
+            customers.append(try Customer(customerId: "C302", firstName: "Sadio", lastName: "Mane", email: "Sadiom@yahoo.com"))
+            customers.append(try Customer(customerId: "C303", firstName: "Jordan", lastName: "Henderson", email: "jorhen@gmail.IO"))
+    
+        }catch validEmail.invalidEmail(Problem: "email"){
+         print("Invalid Email Address")
+    
+        }
+         catch {
+          print("Unrecognised Error")
+    }
 
+}
 }
