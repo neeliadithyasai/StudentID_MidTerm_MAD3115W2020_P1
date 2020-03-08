@@ -10,6 +10,8 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+   
+    
     @IBOutlet weak var txtUsername: UITextField!
     
     @IBOutlet weak var switchRememberme: UISwitch!
@@ -22,6 +24,7 @@ class LoginViewController: UIViewController {
 
       override func viewDidLoad() {
         super.viewDidLoad()
+    
         
         let ud = UserDefaults.standard
                let e = ud.string(forKey: "email")
@@ -34,6 +37,7 @@ class LoginViewController: UIViewController {
                if let pa = p {
                    txtPassword.text = "\(pa)"
                }
+    
 
       
     }
@@ -71,7 +75,9 @@ class LoginViewController: UIViewController {
                               
                   alertController.addAction(defaultAction)
                   self.present(alertController, animated: true, completion: nil)
-           
+            
+            
+         
                }
                     
               }
@@ -87,6 +93,8 @@ class LoginViewController: UIViewController {
     
 }
  
+
+
    
     
 

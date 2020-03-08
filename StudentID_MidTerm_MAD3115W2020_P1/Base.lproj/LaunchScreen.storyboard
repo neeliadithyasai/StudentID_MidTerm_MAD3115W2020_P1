@@ -37,7 +37,8 @@
                                 <rect key="frame" x="74" y="192" width="261" height="229"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.080355487759999997" green="0.64564013480000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.080355487759999997" green="0.64564013480000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Zp6-un-RcG" firstAttribute="centerX" secondItem="WyK-jO-bH0" secondAttribute="centerX" id="B6F-RR-tq0"/>
                             <constraint firstItem="Y33-pd-qCq" firstAttribute="trailing" secondItem="xFT-Dv-8XW" secondAttribute="trailing" constant="79" id="CJq-V3-ctK"/>
