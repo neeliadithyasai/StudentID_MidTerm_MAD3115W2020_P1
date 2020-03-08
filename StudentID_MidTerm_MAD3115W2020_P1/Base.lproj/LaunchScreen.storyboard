@@ -15,20 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bills" translatesAutoresizingMaskIntoConstraints="NO" id="xFT-Dv-8XW">
-                                <rect key="frame" x="74" y="155" width="261" height="229"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AdithyaSai Neeli" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Yx-1F-JqZ">
-                                <rect key="frame" x="119" y="445" width="216" height="51"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="51" id="mjS-BJ-xV4"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="C0771910" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zp6-un-RcG">
-                                <rect key="frame" x="154" y="504" width="107" height="53"/>
+                                <rect key="frame" x="151" y="576" width="107" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="Rey-m8-UiP"/>
                                 </constraints>
@@ -36,6 +24,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="AdithyaSai Neeli" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Yx-1F-JqZ">
+                                <rect key="frame" x="119" y="517" width="216" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="mjS-BJ-xV4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bills" translatesAutoresizingMaskIntoConstraints="NO" id="xFT-Dv-8XW">
+                                <rect key="frame" x="74" y="192" width="261" height="229"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
