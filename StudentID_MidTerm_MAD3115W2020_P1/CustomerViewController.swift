@@ -32,8 +32,7 @@ class CustomerViewController: UIViewController {
         super.viewDidLoad()
         customerNames = DataStorage.getInstance().getAllCustomers()
         self.navigationItem.title = "Customer"
-        //self.navigationItem.hidesBackButton = true;
-        // Do any additional setup after loading the view.
+        
     }
    
 }
