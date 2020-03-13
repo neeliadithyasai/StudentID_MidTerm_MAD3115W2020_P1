@@ -10,15 +10,43 @@ import UIKit
 
 class billDetailsViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
+    @IBOutlet weak var customerInfo: UILabel!
 
-        
-    }
+    @IBOutlet weak var btnViewBills: UIButton!
     
+    @IBOutlet weak var lblBillDetails: UILabel!
+    
+    lazy var Bills : [Bill] = []
+    var customerBill : Customer?
+    override func viewDidLoad() {
+           super.viewDidLoad()
+           self.navigationItem.title = "Bill Details"
+           let navBar = self.navigationController?.navigationBar
+           navBar?.barTintColor = UIColor.gray
+           navBar?.isTranslucent = true
+           navigationItem.leftBarButtonItem?.tintColor = UIColor.white
+          
+           if let id = customerBill?.customerId, let fn = customerBill?.fullName, let em = customerBill?.email
+           {
+               customerInfo.text = "Customer ID : \(id)\nCustomer Name : \(fn)\nCustomer Email : \(em)"
+               customerInfo.numberOfLines = 0
 
+              if let abc = customerBill?.bills
+              {
+                
+                   for(_,v) in abc
+                   {
+                    lblBillDetails.text = " Bill ID : \(v.billId)\n Bill Type: \(v.billType!)\n Bill Date :\(v.billDate)\n Bill Amount:\(v.billAmount) "
+                    lblBillDetails.numberOfLines = 0
+                  }
+               }
+    
+           
+            }
+     }
+    
+    
+}
    
 
-}
+

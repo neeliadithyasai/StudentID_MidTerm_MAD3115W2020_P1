@@ -9,35 +9,40 @@
 import UIKit
 
 class CustomerViewController: UIViewController {
-
+    
     @IBOutlet weak var tblCustomers: UITableView!
     
     @IBAction func btnLogout(_ sender: Any) {
         let alert = UIAlertController(title: "Logged Out!", message: "you are logged out of current session", preferredStyle: .alert)
         let OKAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {
-               (_)in
-               self.performSegue(withIdentifier: "unwindToMenu", sender: self)
-           })
+            (_)in
+            self.performSegue(withIdentifier: "unwindToMenu", sender: self)
+        })
         
-            alert.addAction(OKAction)
-           self.present(alert, animated: true, completion: nil)
-    
+        alert.addAction(OKAction)
+        self.present(alert, animated: true, completion: nil)
+        
         
     }
     
-  
+    
     lazy var customerNames : [Customer] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        customerNames = DataStorage.getInstance().getAllCustomers()
         self.navigationItem.title = "Customer"
         
+        
     }
-   
+    
+    override func viewWillAppear(_ animated: Bool) {
+        customerNames = DataStorage.getInstance().getAllCustomers()
+        tblCustomers.reloadData()
+    }
+    
 }
 extension CustomerViewController: UITableViewDelegate,UITableViewDataSource{
-   
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -57,16 +62,16 @@ extension CustomerViewController: UITableViewDelegate,UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //let selectedTrail = customerNames[indexPath.row]
+        let selectedTrail = customerNames[indexPath.row]
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
         
         if let viewController = sb.instantiateViewController(identifier: "billDetails") as? billDetailsViewController {
-            //viewController.customerNames = [selectedTrail]
+            viewController.customerBill = selectedTrail
             navigationController?.pushViewController(viewController, animated: true)
         }
-                 
-        }
-            
+        
     }
     
+}
+

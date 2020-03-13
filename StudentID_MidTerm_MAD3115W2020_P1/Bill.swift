@@ -14,10 +14,10 @@ enum BillType{
 
 class Bill:IDisplay{
     
-     var billId: String
-     var billDate: Date
-     var billType: BillType?
-     var billAmount: Double
+    var billId: String
+    var billDate: Date
+    var billType: BillType?
+    var billAmount: Double
     
     init(billId: String,billDate: Date,billType: BillType, billAmount: Double) {
         self.billId = billId
@@ -35,4 +35,4 @@ class Bill:IDisplay{
         print("         Bill Amount : \(d)")
         
     }
-  }
+}
