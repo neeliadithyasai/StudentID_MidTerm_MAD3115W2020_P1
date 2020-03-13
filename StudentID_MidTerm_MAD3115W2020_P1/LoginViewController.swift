@@ -10,7 +10,9 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    
+    enum LoginError: Error{
+    case emailError, passwordError, incomplete
+    }
     
     @IBOutlet weak var txtUsername: UITextField!
     

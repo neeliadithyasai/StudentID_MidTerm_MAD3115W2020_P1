@@ -27,10 +27,11 @@ class billDetailsViewController: UIViewController {
            navBar?.barTintColor = UIColor.white
            navBar?.isTranslucent = true
            navigationItem.leftBarButtonItem?.tintColor = UIColor.white
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add Bill", style: .plain, target: self, action: #selector(addTapped))
         if let id = customerBill?.customerId, let fn = customerBill?.fullName, let em = customerBill?.email, let am = customerBill?.calculatedBill(){
-         customerInfo.text = "Customer ID : \(id)\nCustomer Name : \(fn)\nCustomer Email : \(em)\nTotal Bill : \(am)"
+         customerInfo.text = "Customer ID : \(id)\n\nCustomer Name : \(fn)\n\nCustomer Email : \(em)\n\nTotal Bill : \(am)"
         customerInfo.numberOfLines = 0
-        customerInfo.font = UIFont.boldSystemFont(ofSize: 17)
+        customerInfo.font = UIFont.boldSystemFont(ofSize: 16)
             customerInfo.backgroundColor = UIColor.white
             customerInfo.textColor = UIColor.black
         }
@@ -55,7 +56,12 @@ class billDetailsViewController: UIViewController {
 //
 //            }
      }
-        
+        @objc func addTapped(){
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            if let VC = sb.instantiateViewController(identifier: "addBillCell") as? AddBillViewController {
+                self.navigationController?.pushViewController(VC, animated: true)
+            }
+        }
         
     
     
@@ -86,15 +92,15 @@ extension billDetailsViewController: UITableViewDelegate, UITableViewDataSource{
         let label = UILabel()
         if section == 0{
             label.text = "Internet"
-            label.backgroundColor = UIColor.lightGray
+            label.backgroundColor = UIColor.systemRed
         }
         else if section == 1 {
             label.text = "Hydro"
-            label.backgroundColor = UIColor.lightGray
+            label.backgroundColor = UIColor.systemRed
         }
         else {
             label.text = "Mobile"
-            label.backgroundColor = UIColor.lightGray
+            label.backgroundColor = UIColor.systemRed
         }
         return label
     }
@@ -121,7 +127,7 @@ extension billDetailsViewController: UITableViewDelegate, UITableViewDataSource{
             if exists{
                 let v = customerBill?.bills["H"]
                 let str = v?.billDate.formatDate()
-                cell.textLabel?.text = "Bill Id : \(v!.billId)\nBill Type : Internet\nBill Date : \(str!)\nBill Amount : \(v!.billAmount)"
+                cell.textLabel?.text = "Bill Id : \(v!.billId)\nBill Type : Hydro\nBill Date : \(str!)\nBill Amount : \(v!.billAmount)"
                 cell.textLabel?.numberOfLines = 0
             }
             else {
@@ -135,7 +141,7 @@ extension billDetailsViewController: UITableViewDelegate, UITableViewDataSource{
             if exists{
                 let v = customerBill?.bills["M"]
                 let str = v?.billDate.formatDate()
-                cell.textLabel?.text = "Bill Id : \(v!.billId)\nBill Type : Internet\nBill Date : \(str!)\nBill Amount : \(v!.billAmount)"
+                cell.textLabel?.text = "Bill Id : \(v!.billId)\nBill Type : Mobile\nBill Date : \(str!)\nBill Amount : \(v!.billAmount)"
                 cell.textLabel?.numberOfLines = 0
             }
             else {

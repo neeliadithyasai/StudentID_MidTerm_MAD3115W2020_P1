@@ -13,10 +13,11 @@ class Customer: IDisplay {
         return "\(firstName) \(lastName)"
     }
     var email: String
-    lazy var bills : [String:Bill]=[:]
+    lazy var customerBills : [String:Bill]=[:]
+
     lazy var totalBill: Double = calculatedBill()
     
-//https://docs.swift.org/swift-book/LanguageGuide/ErrorHandling.html
+    //https://docs.swift.org/swift-book/LanguageGuide/ErrorHandling.html
     init(customerId:String, firstName: String, lastName: String, email: String)throws {
         self.customerId = customerId
         self.firstName = firstName
@@ -26,10 +27,19 @@ class Customer: IDisplay {
             throw validEmail.invalidEmail(Problem: "email")
         }
         self.email = email
+
     }
+    func getBills() -> [Bill]{
+        var bills = [Bill]()
+        for i in customerBills{
+            bills.append(i.value)
+        }
+        return bills
+    }
+
     func calculatedBill() -> Double{
         var t = 0.0
-        for(_,v) in bills{
+        for(_,v) in customerBills{
             t = t + v.billAmount
         }
         return t
