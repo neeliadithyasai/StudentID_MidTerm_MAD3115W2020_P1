@@ -56,6 +56,19 @@ class billDetailsViewController: UIViewController {
 //
 //            }
      }
+    override func viewWillAppear(_ animated: Bool) {
+           super.viewWillAppear(animated)
+        
+        if let id = customerBill?.customerId, let fn = customerBill?.fullName, let em = customerBill?.email, let am = customerBill?.calculatedBill(){
+        customerInfo.text = "Customer ID : \(id)\nCustomer Name : \(fn)\nCustomer Email : \(em)\nTotal Bill : \(am)"
+        customerInfo.numberOfLines = 0
+        customerInfo.font = UIFont.boldSystemFont(ofSize: 17)
+        customerInfo.backgroundColor = UIColor.blue
+        customerInfo.textColor = UIColor.green
+           self.Bills = (customerBill?.getBills())!
+           self.tblBillsView.reloadData()
+       }
+    }
         @objc func addTapped(){
             let sb = UIStoryboard(name: "Main", bundle: nil)
             if let VC = sb.instantiateViewController(identifier: "addBillCell") as? AddBillViewController {
