@@ -12,7 +12,9 @@ class billsViewController: UIViewController {
     
     @IBOutlet weak var tblView: UITableView!
     
-    lazy var Bills : [Bill] = []
+    @IBOutlet weak var lblCustomerInfo: UILabel!
+    
+    
     var customerBill : Customer?
     
     override func viewDidLoad() {
@@ -23,8 +25,15 @@ class billsViewController: UIViewController {
         navBar?.isTranslucent = true
         navigationItem.leftBarButtonItem?.tintColor = UIColor.white
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add Bill", style: .plain, target: self, action: #selector(addTapped))
-
-        // Do any additional setup after loading the view.
+        if let id = customerBill?.customerId, let fn = customerBill?.fullName, let em = customerBill?.email, let am = customerBill?.calculatedBill(){
+                   lblCustomerInfo.text = "Customer ID : \(id)\nCustomer Name : \(fn)\nCustomer Email : \(em)\nTotal Bill : \(am)"
+                  lblCustomerInfo.numberOfLines = 0
+                  lblCustomerInfo.font = UIFont.boldSystemFont(ofSize: 17)
+                   lblCustomerInfo.backgroundColor = UIColor.blue//
+                   lblCustomerInfo.textColor = UIColor.green
+                   
+        }
+        
     }
     @objc func addTapped(){
         let sb = UIStoryboard(name: "Main", bundle: nil)
@@ -35,7 +44,6 @@ class billsViewController: UIViewController {
     
 }
 
-    
 extension billsViewController: UITableViewDelegate, UITableViewDataSource{
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -65,8 +73,7 @@ extension billsViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "billCell", for: indexPath)
-        //cell.textLabel?.text = "\(name!.billAmount)\(name!.billId)"
-        //let name = customerBill?.bills
+       
         
         if indexPath.section == 0{
             

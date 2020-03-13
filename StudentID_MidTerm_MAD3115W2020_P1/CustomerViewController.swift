@@ -67,8 +67,8 @@ extension CustomerViewController: UITableViewDelegate,UITableViewDataSource{
         let sb = UIStoryboard(name: "Main", bundle: nil)
         
         if let viewController = sb.instantiateViewController(identifier: "billDetails") as? billDetailsViewController {
-            viewController.customerBill = selectedTrail
             navigationController?.pushViewController(viewController, animated: true)
+            viewController.customerBill = selectedTrail
         }
         
     }
