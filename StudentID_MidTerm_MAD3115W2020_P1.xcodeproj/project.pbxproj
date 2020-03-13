@@ -18,6 +18,7 @@
 		7A470842241B02140082E81E /* billsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A470841241B02140082E81E /* billsViewController.swift */; };
 		7A470844241B07B60082E81E /* Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A470843241B07B60082E81E /* Internet.swift */; };
 		7A470846241BA4630082E81E /* Hydro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A470845241BA4630082E81E /* Hydro.swift */; };
+		7A470848241BA4BE0082E81E /* Mobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A470847241BA4BE0082E81E /* Mobile.swift */; };
 		7A97C2F22411BC2400079AA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A97C2F12411BC2400079AA3 /* AppDelegate.swift */; };
 		7A97C2F42411BC2400079AA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A97C2F32411BC2400079AA3 /* SceneDelegate.swift */; };
 		7A97C2F92411BC2400079AA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A97C2F72411BC2400079AA3 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		7A470841241B02140082E81E /* billsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = billsViewController.swift; sourceTree = "<group>"; };
 		7A470843241B07B60082E81E /* Internet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Internet.swift; sourceTree = "<group>"; };
 		7A470845241BA4630082E81E /* Hydro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hydro.swift; sourceTree = "<group>"; };
+		7A470847241BA4BE0082E81E /* Mobile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile.swift; sourceTree = "<group>"; };
 		7A97C2EE2411BC2400079AA3 /* StudentID_MidTerm_MAD3115W2020_P1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentID_MidTerm_MAD3115W2020_P1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A97C2F12411BC2400079AA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A97C2F32411BC2400079AA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				7A470841241B02140082E81E /* billsViewController.swift */,
 				7A470843241B07B60082E81E /* Internet.swift */,
 				7A470845241BA4630082E81E /* Hydro.swift */,
+				7A470847241BA4BE0082E81E /* Mobile.swift */,
 			);
 			path = StudentID_MidTerm_MAD3115W2020_P1;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				7A97C2F22411BC2400079AA3 /* AppDelegate.swift in Sources */,
 				7A010B91241318060096C6F1 /* billDetailsViewController.swift in Sources */,
 				7A97C2F42411BC2400079AA3 /* SceneDelegate.swift in Sources */,
+				7A470848241BA4BE0082E81E /* Mobile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
