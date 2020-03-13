@@ -17,6 +17,10 @@ class AddBillViewController: UIViewController {
     
     @IBOutlet weak var billAmountField: UITextField!
     
+    @IBAction func btnSave(_ sender: UIButton) {
+        
+        
+    }
     
      var selectedCustomer: Customer?
     
@@ -85,6 +89,8 @@ class AddBillViewController: UIViewController {
             selectedType = types[row]
             billTypeField.text = selectedType
         }
+        
+        
         
         
     }
