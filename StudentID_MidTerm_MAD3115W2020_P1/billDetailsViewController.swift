@@ -110,9 +110,9 @@ extension billDetailsViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
-   func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if(indexPath.row % 2 == 0){
-           cell.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+            cell.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
             cell.textLabel?.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
             cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 17)
             
@@ -122,6 +122,6 @@ extension billDetailsViewController: UITableViewDelegate, UITableViewDataSource{
             cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 17)
         }
     }
-
+    
     
 }

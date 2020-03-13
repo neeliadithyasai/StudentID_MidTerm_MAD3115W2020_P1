@@ -9,11 +9,11 @@
 import Foundation
 extension Date {
     
-       
+    
     func formatDate() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE, dd MMMM, yyyy"
         return dateFormatter.string(from: self)
     }
-
+    
 }

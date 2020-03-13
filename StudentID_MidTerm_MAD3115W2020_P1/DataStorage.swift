@@ -47,7 +47,7 @@ class DataStorage {
             bills.updateValue(H1, forKey: "HYD001")
             let m1 = DateComponents(calendar: calendar, year: 2019, month: 12, day: 21)
             let md1 = calendar.date(from: m1)
-                let M1 = try Mobile(billId: "MOB101", billDate: md1!, billType: BillType.Mobile, billAmount: 100.53, modelName: "Apple Xr", mobileNumber: "9876578645", internetUsed: 14, minuteUsed: 351, planName: "20 GB ultra Deal")
+            let M1 = try Mobile(billId: "MOB101", billDate: md1!, billType: BillType.Mobile, billAmount: 100.53, modelName: "Apple Xr", mobileNumber: "9876578645", internetUsed: 14, minuteUsed: 351, planName: "20 GB ultra Deal")
             bills.updateValue(M1, forKey: "MOB101")
             C1.customerBills.updateValue(M1, forKey: "MOB101")
             
@@ -75,12 +75,12 @@ class DataStorage {
             bills.updateValue(H3, forKey: "HYD003")
             C3.customerBills.updateValue(H3, forKey: "HYD003")
         }catch validEmail.invalidEmail(Problem: "email"){
-         print("Invalid Email Address")
-    
+            print("Invalid Email Address")
+            
         }
-         catch {
-          print("Unrecognised Error")
+        catch {
+            print("Unrecognised Error")
+        }
     }
- }
     let calendar = Calendar.current
 }

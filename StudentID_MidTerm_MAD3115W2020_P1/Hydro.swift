@@ -13,7 +13,7 @@ class Hydro: Bill {
     var agencyName: String?
     var unitsConsumed: Int = 0
     
-
+    
     
     init(billId: String, billDate: Date, billType: BillType, billAmount: Double, agencyName: String,unitsConsumed: Int) {
         super.init(billId: billId, billDate: billDate, billType: billType, billAmount: billAmount)
@@ -23,10 +23,10 @@ class Hydro: Bill {
         
     }
     
-   override func display() {
-    super.display()
-    print("         Agency Name : \(agencyName!)")
-    print("" .formatUnit(unitsConsumed: unitsConsumed))
-    print("         ***************************************************")
+    override func display() {
+        super.display()
+        print("         Agency Name : \(agencyName!)")
+        print("" .formatUnit(unitsConsumed: unitsConsumed))
+        print("         ***************************************************")
     }
 }

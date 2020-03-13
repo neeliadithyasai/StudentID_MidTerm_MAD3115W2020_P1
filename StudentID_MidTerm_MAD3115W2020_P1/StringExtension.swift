@@ -16,8 +16,8 @@ extension String{
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailPred.evaluate(with: self)
     }
-   func formatCurrency() -> String{
-            return "$\(self)"
+    func formatCurrency() -> String{
+        return "$\(self)"
     }
     func formatUnit(unitsConsumed: Int)->String{
         return "         Units Consumed : \(unitsConsumed) Units "
@@ -30,12 +30,12 @@ extension String{
         return "         Minutes Usage : \(minutesUsed) minutes "
     }
     func toDate(withFormat format: String = "EEEE, dd MMMM, yyyy") -> Date {
-      let dateFormatter = DateFormatter()
-      dateFormatter.dateFormat = format
-      guard let date = dateFormatter.date(from: self) else {
-        preconditionFailure("Take a look to your format")
-      }
-      return date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        guard let date = dateFormatter.date(from: self) else {
+            preconditionFailure("Take a look to your format")
+        }
+        return date
     }
 }
 

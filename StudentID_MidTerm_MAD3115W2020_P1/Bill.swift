@@ -26,7 +26,7 @@ class Bill:IDisplay{
         self.billAmount = billAmount
     }
     func display() {
-
+        
         
     }
 }

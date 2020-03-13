@@ -20,9 +20,9 @@ class Customer: IDisplay {
     }
     var email: String
     lazy var customerBills : [String:Bill]=[:]
-
+    
     lazy var totalBill: Double = calculatedBill()
- 
+    
     init(customerId:String, firstName: String, lastName: String, email: String)throws {
         self.customerId = customerId
         self.firstName = firstName
@@ -32,7 +32,7 @@ class Customer: IDisplay {
             throw validEmail.invalidEmail(Problem: "email")
         }
         self.email = email
-
+        
     }
     func getBills() -> [Bill]{
         var bills = [Bill]()
@@ -41,7 +41,7 @@ class Customer: IDisplay {
         }
         return bills
     }
-
+    
     func calculatedBill() -> Double{
         var t = 0.0
         for(_,v) in customerBills{
@@ -51,11 +51,11 @@ class Customer: IDisplay {
     }
     
     func display(){
-
+        
     }
-  }
+}
 
 
 
 
- //https://docs.swift.org/swift-book/LanguageGuide/ErrorHandling.html
+//https://docs.swift.org/swift-book/LanguageGuide/ErrorHandling.html
