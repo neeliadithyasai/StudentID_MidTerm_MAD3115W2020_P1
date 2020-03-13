@@ -15,6 +15,7 @@
 		7A010B6924128C410096C6F1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A010B6824128C410096C6F1 /* StringExtension.swift */; };
 		7A010B6B24128D9B0096C6F1 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A010B6A24128D9B0096C6F1 /* DataStorage.swift */; };
 		7A010B91241318060096C6F1 /* billDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A010B90241318060096C6F1 /* billDetailsViewController.swift */; };
+		7A24C7E6241C4DD1005707E2 /* users.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A24C7E5241C4DD1005707E2 /* users.plist */; };
 		7A470844241B07B60082E81E /* Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A470843241B07B60082E81E /* Internet.swift */; };
 		7A470846241BA4630082E81E /* Hydro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A470845241BA4630082E81E /* Hydro.swift */; };
 		7A470848241BA4BE0082E81E /* Mobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A470847241BA4BE0082E81E /* Mobile.swift */; };
@@ -37,6 +38,7 @@
 		7A010B6824128C410096C6F1 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		7A010B6A24128D9B0096C6F1 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
 		7A010B90241318060096C6F1 /* billDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = billDetailsViewController.swift; sourceTree = "<group>"; };
+		7A24C7E5241C4DD1005707E2 /* users.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = users.plist; sourceTree = "<group>"; };
 		7A470843241B07B60082E81E /* Internet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Internet.swift; sourceTree = "<group>"; };
 		7A470845241BA4630082E81E /* Hydro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hydro.swift; sourceTree = "<group>"; };
 		7A470847241BA4BE0082E81E /* Mobile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				7A97C32F2412228900079AA3 /* AddNewCustomerViewController.swift */,
 				7A010B5E241270DA0096C6F1 /* CustomerViewController.swift */,
 				7A97C32D24121D8100079AA3 /* LoginViewController.swift */,
+				7A24C7E5241C4DD1005707E2 /* users.plist */,
 			);
 			path = StudentID_MidTerm_MAD3115W2020_P1;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				7A97C2FE2411BC2700079AA3 /* LaunchScreen.storyboard in Resources */,
 				7A97C2FB2411BC2700079AA3 /* Assets.xcassets in Resources */,
 				7A97C2F92411BC2400079AA3 /* Main.storyboard in Resources */,
+				7A24C7E6241C4DD1005707E2 /* users.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
