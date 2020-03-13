@@ -14,15 +14,41 @@ class AddBillViewController: UIViewController {
     
     @IBOutlet weak var dateField: UITextField!
     @IBOutlet weak var billTypeField: UITextField!
-    
+    var selectedCustomer: Customer?
     @IBOutlet weak var billAmountField: UITextField!
     
-    @IBAction func btnSave(_ sender: UIButton) {
+    @IBAction func btnSave(_ sender: UIButton) {if let id = idField.text, let df = dateField.text , let btf = billTypeField.text, let baf = billAmountField.text
+                        
+                    { if id == "" || df == "" || btf == "" || baf == "" {
+                        let alertController = UIAlertController(title: "ERROR", message:
+                            "Incomplete Form", preferredStyle: .alert)
+                        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+
+                        self.present(alertController, animated: true, completion: nil)
+                    }
+                    
+                        else{
+                        if id.contains("INT"){
+                            selectedCustomer?.customerBills.updateValue(Bill(billId: "\(id)", billDate: df.toDate(), billType: BillType.Internet, billAmount: Double(baf)!), forKey: "\(id)")
+                        }
+                        else if id.contains("HYD"){
+                            selectedCustomer?.customerBills.updateValue(Bill(billId: "\(id)", billDate: df.toDate(), billType: BillType.Hydro, billAmount: Double(baf)!), forKey: "\(id)")
+                        }
+                        else if id.contains("MOB"){
+                         selectedCustomer?.customerBills.updateValue(Bill(billId: "\(id)", billDate: df.toDate(), billType: BillType.Mobile, billAmount: Double(baf)!), forKey: "\(id)")
+                     }
+                    
+            
+            
+        }
+            }
+             self.navigationController?.popViewController(animated: true)
+        
         
         
     }
     
-     var selectedCustomer: Customer?
+     
     
     
         let types = ["Mobile","Hydro","Internet"]
