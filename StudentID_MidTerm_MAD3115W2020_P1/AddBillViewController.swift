@@ -17,6 +17,10 @@ class AddBillViewController: UIViewController {
     
     @IBOutlet weak var billAmountField: UITextField!
     
+    
+     var selectedCustomer: Customer?
+    
+    
         let types = ["Mobile","Hydro","Internet"]
         var selectedType : String?
         override func viewDidLoad() {
