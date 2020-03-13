@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   users.plist
-   StudentID_MidTerm_MAD3115W2020_P1
-
-   Created by adithyasai neeli on 2020-03-13.
-   Copyright (c) 2020 adithyasai neeli. All rights reserved.
--->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-    
-    </dict>
+<dict>
+	<key>admin@gmail.com</key>
+	<string>admin123</string>
+	<key>adithya@gmail.com</key>
+	<string>adithya123</string>
+	<key>paul@gmail.com</key>
+	<string>paul123</string>
+	<key>dan@gmail.com</key>
+	<string>dan123</string>
+	<key>cooper@gmail.com</key>
+	<string>cooper123</string>
+</dict>
 </plist>
