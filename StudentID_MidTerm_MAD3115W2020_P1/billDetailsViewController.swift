@@ -9,56 +9,56 @@
 import UIKit
 
 class billDetailsViewController: UIViewController {
-
+    
     @IBOutlet weak var customerInfo: UILabel!
-
-
+    
+    
     @IBOutlet weak var tblBillsView: UITableView!
     
     
     lazy var Bills : [Bill] = []
     var customerBill : Customer?
     override func viewDidLoad() {
-           super.viewDidLoad()
-           self.navigationItem.title = "Bill Details"
-           let navBar = self.navigationController?.navigationBar
-           navBar?.barTintColor = UIColor.white
-           navBar?.isTranslucent = true
-           navigationItem.leftBarButtonItem?.tintColor = UIColor.white
+        super.viewDidLoad()
+        self.navigationItem.title = "Bill Details"
+        let navBar = self.navigationController?.navigationBar
+        navBar?.barTintColor = UIColor.white
+        navBar?.isTranslucent = true
+        navigationItem.leftBarButtonItem?.tintColor = UIColor.white
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add Bill", style: .plain, target: self, action: #selector(addTapped))
         if let id = customerBill?.customerId, let fn = customerBill?.fullName, let em = customerBill?.email, let am = customerBill?.calculatedBill(){
-         customerInfo.text = "Customer ID : \(id)\n\nCustomer Name : \(fn)\n\nCustomer Email : \(em)\n\nTotal Bill : \(am)"
-        customerInfo.numberOfLines = 0
-        customerInfo.font = UIFont.boldSystemFont(ofSize: 16)
+            customerInfo.text = "Customer ID : \(id)\n\nCustomer Name : \(fn)\n\nCustomer Email : \(em)\n\nTotal Bill : \(am)"
+            customerInfo.numberOfLines = 0
+            customerInfo.font = UIFont.boldSystemFont(ofSize: 16)
             customerInfo.backgroundColor = UIColor.white
             customerInfo.textColor = UIColor.black
         }
-
-     }
+        
+    }
     override func viewWillAppear(_ animated: Bool) {
-           super.viewWillAppear(animated)
+        super.viewWillAppear(animated)
         
         if let id = customerBill?.customerId, let fn = customerBill?.fullName, let em = customerBill?.email, let am = customerBill?.calculatedBill(){
-        customerInfo.text = "Customer ID : \(id)\nCustomer Name : \(fn)\nCustomer Email : \(em)\nTotal Bill : \(am)"
-        customerInfo.numberOfLines = 0
-        customerInfo.font = UIFont.boldSystemFont(ofSize: 17)
-        customerInfo.backgroundColor = UIColor.blue
-        customerInfo.textColor = UIColor.green
-           self.Bills = (customerBill?.getBills())!
-           self.tblBillsView.reloadData()
-       }
-    }
-        @objc func addTapped(){
-            let sb = UIStoryboard(name: "Main", bundle: nil)
-            if let VC = sb.instantiateViewController(identifier: "addBillCell") as? AddBillViewController {
-                self.navigationController?.pushViewController(VC, animated: true)
-            }
+            customerInfo.text = "Customer ID : \(id)\nCustomer Name : \(fn)\nCustomer Email : \(em)\nTotal Bill : \(am)"
+            customerInfo.numberOfLines = 0
+            customerInfo.font = UIFont.boldSystemFont(ofSize: 17)
+            customerInfo.backgroundColor = UIColor.blue
+            customerInfo.textColor = UIColor.green
+            self.Bills = (customerBill?.getBills())!
+            self.tblBillsView.reloadData()
         }
-        
+    }
+    @objc func addTapped(){
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        if let VC = sb.instantiateViewController(identifier: "addBillCell") as? AddBillViewController {
+            self.navigationController?.pushViewController(VC, animated: true)
+        }
+    }
+    
     
     
 }
-   
+
 
 
 extension billDetailsViewController: UITableViewDelegate, UITableViewDataSource{
@@ -75,39 +75,38 @@ extension billDetailsViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "billCell", for: indexPath)
         let bill = Bills[indexPath.row]
         if bill.billId.contains("INT"){
-        
-        //if indexPath.section == 0{
-                let str = bill.billDate.formatDate()
-                 cell.textLabel?.text = "Bill Id : \(bill.billId)\nBill Type : Internet\nBill Date : \(str)\nBill Amount : \(bill.billAmount)"
-                 cell.textLabel?.numberOfLines = 0
-
-       // }
+            
+            
+            let str = bill.billDate.formatDate()
+            cell.textLabel?.text = "Bill Id : \(bill.billId)\nBill Type : Internet\nBill Date : \(str)\nBill Amount : \(bill.billAmount)"
+            cell.textLabel?.numberOfLines = 0
+            
+           
         }
         if bill.billId.contains("HYD"){
-        // if indexPath.section == 1{
-                
-                    let str = bill.billDate.formatDate()
-                    cell.textLabel?.text = "Bill Id : \(bill.billId)\nBill Type : Hydro\nBill Date : \(str)\nBill Amount : \(bill.billAmount)"
-                    cell.textLabel?.numberOfLines = 0
-
-
+          
+            
+            let str = bill.billDate.formatDate()
+            cell.textLabel?.text = "Bill Id : \(bill.billId)\nBill Type : Hydro\nBill Date : \(str)\nBill Amount : \(bill.billAmount)"
+            cell.textLabel?.numberOfLines = 0
+            
+            
         }
-       // }
+        
         if bill.billId.contains("MOB"){
-       // if indexPath.section == 2
-         //{
             
-                let str = bill.billDate.formatDate()
-                 cell.textLabel?.text = "Bill Id : \(bill.billId)\nBill Type : Mobile\nBill Date : \(str)\nBill Amount : \(bill.billAmount)"
-                 cell.textLabel?.numberOfLines = 0
-
             
-
+            let str = bill.billDate.formatDate()
+            cell.textLabel?.text = "Bill Id : \(bill.billId)\nBill Type : Mobile\nBill Date : \(str)\nBill Amount : \(bill.billAmount)"
+            cell.textLabel?.numberOfLines = 0
+            
+            
+            
         }
-     
-            return cell
-    
-
+        
+        return cell
+        
+        
         
     }
 }
